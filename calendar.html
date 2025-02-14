@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Are You Free? 📅</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body class="calendar-bg">
+    <h1 class="glowing-text">Are you free on...</h1>
+    <p class="sub-text">(select a date)</p>
+
+    <div class="calendar-container">
+        <label for="date-picker">Which day:</label>
+        <input type="date" id="date-picker">
+        <button id="submit-date">Submit</button>
+        <p id="error-message" class="hidden">Hmm... I think you're only free on **Valentine's Day**. Try again. 😏</p>
+    </div>
+
+    <script src="calendar.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/confetti-js"></script>
+</head>
+
+<body class="valentine-bg">
+
+    <div class="valentine-container">
+        <div class="valentine-container fade-in">
+
+        <h1 class="glowing-text">💘 Will you be my valentine? 💘</h1>
+
+        <img id="valentine-gif" src="assets/images/please-please-please.gif" alt="Cute pleading cat" class="valentine-gif">
+
+        <div class="button-container">
+            <button id="yes-btn" class="pixel-button">YES! 😍💕😭</button>
+            <button id="no-btn" class="pixel-button">No... I hate you and I hope you stub your toe. o(╥﹏╥)o</button>
+        </div>
+
+        <audio id="valentine-song" autoplay loop>
+            <source src="assets/sounds/valentine-song.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+<canvas id="confetti-canvas"></canvas>
+<div id="loading-screen" class="loading-screen">Loading...</div>
+
+
+
+</html>
+

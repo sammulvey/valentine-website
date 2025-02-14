@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Well Do You Know Us? 💖</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body class="quiz-bg fade-in">
+
+    <h1 class="glowing-text">💘 How Well Do You Know Us? 💘</h1>
+
+    <div id="quiz-container">
+        <div id="question-container">
+            <h2 id="question-text">Loading...</h2>
+            <div id="gif-container"></div> <!-- 🆕 NEW: This is where GIFs will be placed -->
+            <div id="answer-buttons" class="answer-grid"></div>
+            <p id="feedback"></p>
+        </div>
+    
+        <button id="next-button" class="hidden">Next</button>
+    </div>
+
+
+    <!-- Quiz Results -->
+    <div id="quiz-results" class="hidden">
+        <h2 id="result-text"></h2>
+        <img id="result-gif" src="" alt="Result GIF">
+        <button id="restart-button">Retry?</button>
+    </div>
+
+    <script src="quiz.js"></script>
+
+</body>
+
+</html>

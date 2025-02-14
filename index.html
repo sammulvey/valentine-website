@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Be My Valentine?</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body class="gradient-background">
+
+    <!-- Password Screen -->
+    <div id="password-screen" class="password-background">
+        <h2 class="glowing-text">🔒 Enter Password 🔒</h2>
+        <input type="password" id="password-input" placeholder="Enter Password">
+        <button onclick="checkPassword()">Submit</button>
+<p id="error-message" style="color:red; display:none;">
+    🤔 Hmm... that was close! Check the <strong>first page</strong> of your Valentine’s card for the real password! 😉
+</p>
+        <audio id="error-sound" src="assets/sounds/zombiescream.mp3"></audio>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+

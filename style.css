@@ -1,0 +1,1120 @@
+#confetti-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    /* Ensures no interaction issues */
+    z-index: 9999;
+    /* Ensures it appears over everything */
+}
+
+/* Wiggle animation */
+@keyframes wiggle {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(5deg);
+    }
+
+    50% {
+        transform: rotate(-5deg);
+    }
+
+    75% {
+        transform: rotate(5deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.valentine-gif:hover {
+    animation: wiggle 0.4s ease-in-out infinite;
+}
+
+/* Full-screen loading animation */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: pink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    text-shadow: 2px 2px 4px #ff3399;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease-out;
+}
+
+/* Fade-in effect */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1.5s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Change text color for better contrast */
+.glowing-text {
+    font-size: 28px;
+    color: #ff0055; /* Brighter pink-red for visibility */
+    text-shadow: 2px 2px 4px #ff66cc, 0 0 10px white;
+    animation: flicker 1s infinite alternate;
+}
+
+/* Centering the content */
+.valentine-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+}
+
+/* Make the GIF larger */
+#valentine-gif {
+    width: 350px; /* Increase size */
+    height: auto;
+    margin-bottom: 20px; /* Space between GIF and buttons */
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ff66cc;
+}
+
+/* Center and add spacing between buttons */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between buttons */
+}
+
+
+/* Password Screen */
+#password-screen {
+    background-color: rgba(0, 0, 0, 0.9);
+    border: 4px dashed #ff66cc;
+    padding: 10px;
+    width: 60%;
+    height: 60%;
+    margin: 100px auto;
+    border-radius: 15px;
+    box-shadow: 0px 0px 10px #ff66cc;
+    animation: neon-pulse 1.5s infinite alternate;
+}
+
+@keyframes neon-pulse {
+    from { box-shadow: 0px 0px 10px #ff66cc; }
+    to { box-shadow: 0px 0px 20px #ff33aa; }
+}
+
+h2 {
+    color: #ffccff;
+    margin-bottom: 20px;
+    font-size: 24px;
+    text-shadow: 2px 2px 4px #ff33aa;
+    animation: blink 1s infinite;
+}
+
+/* Blinking Effect */
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+/* Input Field */
+#password-input {
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 3px solid #ff66cc;
+    border-radius: 5px;
+    background-color: black;
+    color: #ffccff;
+    text-align: center;
+    width: 80%;
+    outline: none;
+    animation: input-glow 2s infinite alternate;
+}
+
+@keyframes input-glow {
+    from { border-color: #ff66cc; }
+    to { border-color: #ff33aa; }
+}
+
+/* Submit Button */
+button {
+    background: linear-gradient(to right, #ff66cc, #ff33aa);
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Glowing Text Effect */
+.glowing-text {
+    font-size: 2em;
+    text-align: center;
+    color: #ff66cc;
+    text-shadow: 0 0 5px #ff66cc, 0 0 10px #ff33aa, 0 0 15px #ff00ff;
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 5px #ff66cc, 0 0 10px #ff33aa; }
+    to { text-shadow: 0 0 15px #ff00ff, 0 0 20px #ff33aa; }
+}
+
+/* Fade-in Animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Hover Effect on Images */
+.hover-effect {
+    transition: transform 0.3s ease-in-out;
+}
+
+.hover-effect:hover {
+    transform: scale(1.1);
+}
+
+/* Pulsating Button */
+.pulsating-button {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+/* Easter Egg Popup */
+.hidden {
+    display: none;
+}
+
+#easter-egg-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffccff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Gradient background for the main page */
+.gradient-background {
+    background: linear-gradient(to bottom, #ff66cc, #ff3366);
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Static pink background for the password screen */
+.password-background {
+    background-color: #ff99cc;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/* Playlist Page Background */
+.playlist-bg {
+    background: linear-gradient(to bottom, #ff99cc, #ff3366);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+/* Style for the playlist container */
+.playlist-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hint text */
+.hint-text {
+    font-size: 18px;
+    color: white;
+    margin-top: 10px;
+    text-shadow: 0 0 5px #ff66cc;
+}
+
+/* Next Page Button */
+.next-button {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 20px;
+    text-decoration: none;
+    color: white;
+    background: #ff3399;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ff66cc;
+    transition: transform 0.2s;
+}
+
+.next-button:hover {
+    transform: scale(1.1);
+}
+
+/* Pulsating Button Effect */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.pulsating-button {
+    animation: pulse 1.5s infinite;
+}
+
+.map-bg {
+    background: linear-gradient(to bottom, #ff99cc, #ff3366);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Ensure scrolling is enabled */
+body {
+    overflow-y: auto;
+    /* Allows vertical scrolling */
+    overflow-x: hidden;
+    /* Prevents side scrolling */
+    height: 100vh;
+    /* Ensures the full viewport height is used */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centers content horizontally */
+}
+
+/* Adjust map positioning */
+.map-container {
+    position: relative;
+    width: 70%;
+    /* Reduce width to make it fit better */
+    max-width: 800px;
+    margin: 50px auto 100px auto;
+    /* Add top & bottom space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ensure the map image stays centered */
+#map {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+/* City Markers */
+/* Reduce Hover Effect Pop-Out */
+.city {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    /* Keep it small */
+    font-weight: bold;
+    color: white;
+    background: #ff3399;
+    padding: 6px 10px;
+    /* Keep the circle small */
+    border-radius: 50%;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.1s ease-in-out, box-shadow 0.1s ease-in-out;
+    width: 30px;
+    /* Set fixed width */
+    height: 30px;
+    /* Set fixed height */
+    line-height: 30px;
+    /* Center text vertically */
+}
+
+/* Reduce Hover Effect Movement */
+.city:hover {
+    transform: scale(1.1);
+    /* Small increase */
+    box-shadow: 0px 0px 5px #ff66cc;
+}
+
+.collage-title {
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    text-align: left;
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    text-shadow:
+        -2px -2px 0 #ff66cc,
+        2px -2px 0 #ff66cc,
+        -2px 2px 0 #ff66cc,
+        2px 2px 0 #ff66cc,
+        0 0 10px #ff66cc,
+        0 0 20px #ff3399;
+    z-index: 10;
+}
+
+/* Hover Effect */
+.city:hover {
+    transform: scale(1.2);
+    box-shadow: 0px 0px 10px #ff66cc;
+}
+
+.locked {
+    opacity: 0.5;
+    filter: grayscale(50%);
+    pointer-events: none;
+    /* Prevents clicking locked cities */
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Unlock animation */
+.unlocked {
+    opacity: 1 !important;
+    filter: none;
+    pointer-events: all !important;
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Collage Popup */
+.hidden {
+    display: none;
+}
+
+#collage-popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    box-shadow: 0px 0px 10px #ff66cc;
+    border-radius: 10px;
+    z-index: 1000;
+    text-align: center;
+    max-width: 80%;
+}
+
+#collage-popup img {
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+#close-collage {
+    margin-top: 10px;
+    background: #ff66cc;
+    color: white;
+    font-size: 16px;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#close-collage:hover {
+    background: #ff3399;
+}
+
+/* Hidden by default */
+.hidden {
+    display: none;
+}
+
+/* Continue Button Styling */
+#continue-button {
+    background: linear-gradient(to right, #ff66cc, #ff33aa);
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover Effect */
+#continue-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.quiz-bg {
+    background: linear-gradient(to bottom, #ff99cc, #ff3366);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+}
+
+/* Quiz Container */
+#quiz-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #ff66cc;
+    text-align: center;
+    width: 60%;
+}
+
+.answer-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.answer-btn {
+    background: #ff3399;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.answer-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px #ff66cc;
+}
+
+/* Feedback */
+#feedback {
+    font-size: 18px;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #ff3366;
+}
+
+/* Hidden elements */
+.hidden {
+    display: none;
+}
+
+/* Results */
+#quiz-results {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #ff66cc;
+    text-align: center;
+    width: 60%;
+}
+
+#result-gif {
+    width: 200px;
+    margin-top: 15px;
+}
+
+.quiz-question {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 10px;
+    /* Adds space between question and GIF */
+}
+
+.question-gif {
+    max-width: 250px;
+    /* Adjust size as needed */
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    /* Center the GIF */
+    border-radius: 10px;
+    /* Optional: Rounded edges */
+    box-shadow: 0px 0px 10px #ff66cc;
+    /* Optional: Glow effect */
+}
+
+.image-answer {
+    width: 150px;
+    /* Adjust size as needed */
+    height: auto;
+    border: 3px solid transparent;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, border-color 0.2s;
+}
+
+.image-answer:hover {
+    transform: scale(1.1);
+    border-color: #ff66cc;
+}
+
+.image-answer.selected {
+    border-color: #4CAF50;
+    /* Green border for selected answer */
+    transform: scale(1.1);
+}
+
+.image-answers {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    /* Dynamic grid */
+    gap: 10px;
+    justify-content: center;
+    padding: 10px;
+}
+
+.image-answer {
+    width: 100%;
+    /* Makes images fit in their grid cell */
+    max-width: 150px;
+    /* Limits how big they can be */
+    height: auto;
+    border-radius: 10px;
+    /* Smooth corners */
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.image-answer:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px #ff66cc;
+}
+
+.calendar-bg {
+    background: linear-gradient(to bottom, #ff99cc, #ff3366);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+}
+
+.glowing-text {
+    font-size: 28px;
+    text-shadow: 2px 2px 5px #ff66cc;
+}
+
+.sub-text {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.calendar-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px #ff66cc;
+    text-align: center;
+    width: 60%;
+}
+
+button {
+    background: linear-gradient(to right, #ff66cc, #ff33aa);
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-top: 15px;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+.hidden {
+    display: none;
+}
+
+#error-message {
+    color: #ff3366;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.activity-bg {
+    background: linear-gradient(to bottom, #ff99cc, #ff3366);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.option-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.option-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px #ff66cc;
+}
+
+.selected {
+    border: 4px solid #ff3366;
+    box-shadow: 0px 0px 12px #ff3366;
+}
+
+.hidden {
+    display: none;
+}
+
+.locked {
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+.activity-option {
+    text-align: center;
+}
+
+.option-text {
+    font-size: 14px;
+    color: white;
+    margin-top: 5px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.option-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.option-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px #ff66cc;
+}
+
+.selected {
+    border: 4px solid #ff3366;
+    box-shadow: 0px 0px 12px #ff3366;
+}
+
+.hidden {
+    display: none;
+}
+
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+.option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 180px;
+    /* Adjust width as needed */
+    cursor: pointer;
+    /* Ensures the whole div is clickable */
+}
+
+.option-image {
+    width: 100%;
+    max-width: 160px;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+    /* Makes sure images are clickable */
+}
+
+.option-image:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.selected {
+    border: 3px solid #ff3366;
+    /* Highlight selected choice */
+    transform: scale(1.1);
+}
+
+.option-text {
+    margin-top: 8px;
+    font-size: 14px;
+    color: white;
+    font-weight: bold;
+    background: rgba(0, 0, 0, 0.5);
+    /* Optional: Adds contrast for visibility */
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    /* Makes text clickable too */
+}
+
+/* Ensure Next Button is Hidden Initially */
+.hidden {
+    display: none;
+}
+
+/* General page styling */
+.summary-bg {
+    background: linear-gradient(to bottom, #ff99cc, #ff3366);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+/* Centering the summary content */
+.summary-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 15px #ff66cc;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+}
+
+/* Glowing Header */
+.glowing-text {
+    font-size: 30px;
+    font-weight: bold;
+    color: #ff0055;
+    text-shadow: 2px 2px 6px #ff66cc;
+}
+
+/* Subheader */
+.sub-glow {
+    font-size: 22px;
+    font-weight: bold;
+    color: #ff3366;
+    text-shadow: 2px 2px 6px #ff99cc;
+    margin-bottom: 15px;
+}
+
+/* Itinerary text */
+#summary-text {
+    font-size: 18px;
+    color: black;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* "Click Me 🥺" Button */
+.pleading-button {
+    background: linear-gradient(to right, #ff66cc, #ff33aa);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 20px;
+}
+
+.pleading-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px #ff99cc;
+}
+
+/* Restart Button */
+.restart-button {
+    background: linear-gradient(to right, #ff3366, #ff0033);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 10px;
+}
+
+.restart-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 10px #ff0033;
+}
+
+.final-bg {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to bottom, #ff99cc, #ff3366);
+    overflow: hidden;
+}
+
+/* Envelope */
+.envelope-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 5;
+    /* Ensures it stays above flowers */
+}
+
+.envelope {
+    width: 200px;
+    height: 150px;
+    background: #ff6666;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.heart {
+    font-size: 40px;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+
+.heart:hover {
+    transform: scale(1.2);
+}
+
+.letter {
+    width: 400px;
+    /* Adjust width */
+    max-width: 80%;
+    /* Ensures responsiveness */
+    padding: 20px;
+    margin-top: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: 'Dancing Script', cursive;
+    font-size: 20px;
+    line-height: 1.5;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 1s ease-in-out;
+    background-image: repeating-linear-gradient(white,
+            white 24px,
+            /* Space between lines */
+            rgba(0, 0, 0, 0.1) 25px);
+    border-left: 5px solid #ff3366;
+    /* Optional: Adds a book margin effect */
+    padding-left: 15px;
+}
+
+.letter.show {
+    display: block;
+    /* Show letter when clicked */
+}
+
+/* Flower Field */
+.flower-field {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+    /* Prevents interfering with interactions */
+    z-index: 1;
+}
+
+/* Individual Flowers */
+.flower {
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    height: 60px;
+    background: green;
+    border-radius: 5px;
+    animation: sway 4s infinite ease-in-out alternate;
+}
+
+/* Balanced Flower Placement */
+.long {
+    height: 80px;
+    left: 5%;
+}
+
+.short {
+    height: 50px;
+    left: 12%;
+}
+
+.medium {
+    height: 70px;
+    left: 18%;
+}
+
+.tiny {
+    height: 40px;
+    left: 25%;
+}
+
+.tall {
+    height: 90px;
+    right: 5%;
+}
+
+.wide {
+    height: 60px;
+    right: 12%;
+}
+
+.small {
+    height: 45px;
+    right: 18%;
+}
+
+.extralong {
+    height: 100px;
+    right: 25%;
+}
+
+/* Flower Petals */
+.flower::before {
+    content: "🌸";
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 26px;
+    animation: bloom 2s infinite alternate ease-in-out;
+}
+
+/* Swaying Animation */
+@keyframes sway {
+    0% {
+        transform: rotate(-5deg);
+    }
+
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+/* Petal Blooming Effect */
+@keyframes bloom {
+    0% {
+        transform: translateX(-50%) scale(0.9);
+    }
+
+    100% {
+        transform: translateX(-50%) scale(1.1);
+    }
+}
+
+html,
+body {
+    height: 100%;
+    overflow-y: auto;
+    /* Enables scrolling */
+}

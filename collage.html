@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Travel Map ✈️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+
+<body class="map-bg fade-in">
+
+    <h1 class="glowing-text collage-title">🌎 Our Travel Map 🌎</h1>
+
+    <div class="map-container">
+        <img src="assets/images/north-america.svg" alt="Map of US & Canada" id="map">
+
+        <!-- Clickable Cities -->
+        <div class="city" id="montreal" style="top: 52%; left: 84.5%;">M</div>
+        <div class="city locked" id="ottawa" style="top: 54%; left: 81%;">O</div>
+        <div class="city locked" id="new-york" style="top: 58%; left: 80.5%;">NY</div>
+        <div class="city locked" id="north-carolina" style="top: 67.5%; left: 79%;">NC</div>
+        <div class="city locked" id="toronto" style="top: 56%; left: 76.5%;">T</div>
+        <div class="city locked" id="san-diego" style="top: 68%; left: 43%;">SD</div>
+    </div>
+
+    <!-- Collage Popup -->
+    <div id="collage-popup" class="hidden">
+        <h2 id="collage-title"></h2>
+        <div id="collage-images"></div>
+        <button id="close-collage">Close</button>
+    </div>
+
+    <!-- Continue Button (Hidden Initially) -->
+    <button id="continue-button" class="hidden" onclick="nextPage()">Continue to Next Page</button>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
